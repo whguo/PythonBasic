@@ -1,0 +1,53 @@
+1.if....elif....
+
+2.判断和循环语句最后一定加冒号！！！
+
+3.循环中，range(数字)可以产生数字序列，供循环使用。
+  也可以直接迭代list和tuple中的元素。
+
+ 4.使用input('haha':)输入的是字符串，用数字时需要转换
+
+ 5.list[],tuple(1,)。tuple内容不能变化，但tuple中的list元素可以变化。
+
+ 6.dic字典(key:value)，用大括号定义， d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}。
+  d.get('Thomas'），d.get('Thomas', -1)：get函数可以返回指定key对应的数据，不存在可以返回自己指定的值。
+
+ 7.s = set([1, 2, 3]) 集合，没有重复元素。
+
+ 8.不可变对象：字符串。a = 'abc'， a.replace('a', 'A')，'Abc'，>>> a：'abc'
+   replace后字符串本身没有改变。
+
+ 9.空函数
+ 	def nop():
+ 		pass
+ 	什么都不做的情况
+ 	if age>18:
+ 		pass		如果缺了Pass什么都不写会出错
+
+ 10.参数检查
+ def my_abs(x):
+    if not isinstance(x, (int, float)):
+        raise TypeError('bad operand type')
+    if x >= 0:
+        return x
+    else:
+        return -x
+
+ 11.返回多个参数
+ 	import math
+
+	def move(x, y, step, angle=0):
+    	nx = x + step * math.cos(angle)
+    	ny = y - step * math.sin(angle)
+    	return nx, ny
+
+    返回值是一个tuple，返回一个tuple可以省略括号，
+    而多个变量可以同时接收一个tuple，按位置赋给对应的值
+ 
+ 12.函数默认参数一定要指向不可变对象！！！
+
+ 13.逻辑and。如果所有值都为真，那么 and 返回最后一个值，如果某个值为假，则 and 返回第一个假值。
+
+ 14.逻辑or。如果有一个值为真，or 立刻返回该值，如果所有的值都为假，or 返回最后一个假值
+
+    注意 or 在布尔上下文中会一直进行表达式演算直到找到第一个真值，然后就会忽略剩余的比较值
